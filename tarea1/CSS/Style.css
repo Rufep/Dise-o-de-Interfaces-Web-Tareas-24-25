@@ -1,53 +1,67 @@
 header {
-  position: relative; /* Mantiene la posición relativa para el contenido dentro */
-  overflow: hidden; /* Asegura que el contenido no sobresalga */
+  position: relative; 
+  overflow: hidden;
 }
 header h1 {
   font-size: 80px;
   z-index: 2;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: red; /* Color inicial del texto */
+  color: red; 
   background-clip: text;
-  background: linear-gradient(to right, red, white); /* Gradiente de rojo a blanco */
-  -webkit-background-clip: text; /* Hace que el gradiente se aplique al texto */
-  -webkit-text-fill-color: transparent; /* Hace que el color del texto sea transparente */
-  transition: background-color 1s ease; /* Transición del fondo */
+  background: linear-gradient(to right, red, white); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  transition: background-color 1s ease; 
   font-weight: bold;
 }
 
 .headerBackground{
-  width: 100vw; /* Usa el ancho completo de la ventana */
-  height: 300px; /* Ajusta la altura según sea necesario */
-  background-image: url('/media/diseño/cabeceramoderna.jpg'); /* Cambia la ruta a tu imagen */
-  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
-  background-position: center; /* Centra la imagen */
-  display: flex; /* Utiliza flexbox para centrar el contenido */
-  align-items: center; /* Centra verticalmente el texto */
-  justify-content: center; /* Centra horizontalmente el texto */
+  width: 100vw; 
+  height: 300px; 
+  background-image: url('/media/diseño/cabeceramoderna.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
 }
 .headerBackground::before {
-  content: ''; /* Necesario para crear el pseudo-elemento */
-  position: absolute; /* Permite que se superponga al fondo */
+  content: ''; 
+  position: absolute; 
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4); /* Color negro con 50% de opacidad (ajusta según sea necesario) */
-  z-index: 1; /* Asegura que esté por encima de la imagen de fondo */
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: 1; 
 }
+
 main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row; /* Cambia a row para colocar el menú y contenido uno al lado del otro */
 }
-.receta1 h2,
-.receta2 h2,
-.receta3 h2,
-.receta4 h2 {
+
+.menu-aside {
+  flex: 0 0 250px; /* Fijo a 250px o el ancho que prefieras para el menú */
+  /* Opcionalmente, añade más estilo al menú, como un fondo */
+  background-color: #f9f9f9; /* Fondo claro para diferenciar */
+  padding: 10px; /* Espaciado interno */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}
+.contenedorPrincipal {
+  flex: 1; /* Permite que el contenedor use el espacio restante */
+  padding: 10px; /* Espaciado interno */
+  display: flex; /* Usa flex para permitir un mejor control de alineación */
+  flex-direction: column; /* Alinea los hijos en una columna */
+  align-items: center; /* Centra los hijos horizontalmente */
+  
+}
+.contenedorPrincipal h2{
   text-align: center;
-  text-decoration: overline underline;
-  font-size: 30px;
+  text-decoration: underline overline;
 }
+
+
 .recetaContenedor {
   display: flex;
   flex-direction: row;
@@ -89,15 +103,4 @@ main {
     "Lucida Sans", Arial, sans-serif;
   margin-left: 20px;
 }
-/* Ajustar el menú lateral */
-.menulateral {
-  width: 200px; /* Ancho fijo para el menú lateral */
-  border-left: 2px solid #ccc; /* Opcional: línea para separar el menú lateral */
-  padding-left: 20px; /* Espacio interno en el menú lateral */
-}
 
-/* Asegúrate de que el aside tenga un ancho adecuado */
-aside {
-  width: 200px; /* Ancho fijo para el aside */
-  padding-left: 20px; /* Espacio interno en el aside */
-}
