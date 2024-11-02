@@ -7,17 +7,18 @@ header h1 {
   z-index: 2;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: red; /* Color inicial del texto */
+  background-clip: text;
   background: linear-gradient(to right, red, white); /* Gradiente de rojo a blanco */
   -webkit-background-clip: text; /* Hace que el gradiente se aplique al texto */
   -webkit-text-fill-color: transparent; /* Hace que el color del texto sea transparente */
-  transition: background 1s ease; /* Transición del fondo */
+  transition: background-color 1s ease; /* Transición del fondo */
   font-weight: bold;
 }
 
 .headerBackground{
   width: 100vw; /* Usa el ancho completo de la ventana */
   height: 300px; /* Ajusta la altura según sea necesario */
-  background-image: url('/tarea1/media/diseño/cabeceramoderna.jpg'); /* Cambia la ruta a tu imagen */
+  background-image: url('/media/diseño/cabeceramoderna.jpg'); /* Cambia la ruta a tu imagen */
   background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
   background-position: center; /* Centra la imagen */
   display: flex; /* Utiliza flexbox para centrar el contenido */
@@ -31,7 +32,7 @@ header h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3); /* Color negro con 50% de opacidad (ajusta según sea necesario) */
+  background: rgba(0, 0, 0, 0.4); /* Color negro con 50% de opacidad (ajusta según sea necesario) */
   z-index: 1; /* Asegura que esté por encima de la imagen de fondo */
 }
 main {
