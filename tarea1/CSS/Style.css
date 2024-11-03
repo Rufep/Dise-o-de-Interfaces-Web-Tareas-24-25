@@ -1,47 +1,60 @@
-/* Estilo para el encabezado */
-header {
-  position: relative; /* Posiciona el encabezado en relación a otros elementos */
-  overflow: hidden; /* Oculta cualquier contenido que exceda el área del encabezado */
+/* Contenedor principal del encabezado */
+.header-background {
+  position: relative; /* Permite que los elementos hijos se superpongan dentro del contenedor */
+  width: 100%; /* Ancho completo del contenedor */
+  height: 300px; /* Ajusta la altura del encabezado según el diseño */
+  overflow: hidden; /* Oculta cualquier contenido que exceda los límites del contenedor */
 }
 
-/* Estilo para el título dentro del encabezado */
-header h1 {
-  font-size: 80px; /* Tamaño de la fuente del título */
-  z-index: 2; /* Asegura que el título esté por encima de otros elementos */
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Tipografía del encabezado */
-  color: red; /* Color inicial del texto */
-  background-clip: text; /* Aplica el fondo solo al texto */
-  background: linear-gradient(to right, red, white); /* Degradado de color para el fondo del texto */
-  -webkit-background-clip: text; /* Compatibilidad con navegadores basados en WebKit */
+/* Imagen de fondo */
+.header-Img-background img {
+  position: absolute; /* Posiciona la imagen de fondo de manera absoluta dentro del contenedor */
+  top: 0; /* Alínea la parte superior de la imagen con la parte superior del contenedor */
+  left: 0; /* Alínea la parte izquierda de la imagen con la parte izquierda del contenedor */
+  width: 100%; /* Establece el ancho de la imagen al 100% del contenedor */
+  height: 100%; /* Establece la altura de la imagen al 100% del contenedor */
+  object-fit: cover; /* Asegura que la imagen cubra todo el espacio del contenedor sin distorsionarse */
+  z-index: 1; /* Coloca la imagen en el nivel inferior de la pila de elementos */
+}
+
+/* Capa oscura sobre la imagen de fondo */
+.header-background::before {
+  content: ''; /* Crea un pseudo-elemento vacío para usar como capa */
+  position: absolute; /* Posiciona la capa oscura de manera absoluta dentro del contenedor */
+  top: 0; /* Alínea la parte superior de la capa con la parte superior del contenedor */
+  left: 0; /* Alínea la parte izquierda de la capa con la parte izquierda del contenedor */
+  width: 100%; /* Establece el ancho de la capa al 100% del contenedor */
+  height: 100%; /* Establece la altura de la capa al 100% del contenedor */
+  background: rgba(0, 0, 0, 0.4); /* Crea un fondo negro semitransparente para mejorar el contraste del texto */
+  z-index: 2; /* Coloca la capa oscura sobre la imagen, pero debajo del título */
+}
+
+/* Contenedor del título */
+.header-title {
+  position: relative; /* Permite que el título se superponga sobre los elementos de fondo */
+  z-index: 3; /* Asegura que el título esté por encima de la imagen y la capa oscura */
+  height: 100%; /* Asegura que el contenedor use toda la altura disponible */
+  display: flex; /* Utiliza flexbox para alinear el contenido dentro del contenedor */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: flex-start; /* Cambia a flex-start para alinear el contenido desde la parte superior */
+  padding-top: 80px; /* Añade un relleno superior para bajar el h1 y centrarlo verticalmente */
+}
+
+/* Estilo del título h1 */
+.header-title h1 {
+  font-size: 80px; /* Establece el tamaño de la fuente del título */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Define la tipografía del título */
+  color: red; /* Color del texto del título */
+  background-clip: text; /* Aplica el fondo solo al texto, creando un efecto visual */
+  background: linear-gradient(to right, red, white); /* Define un degradado de color para el fondo del texto */
+  -webkit-background-clip: text; /* Compatibilidad con navegadores basados en WebKit para el efecto de clip */
   -webkit-text-fill-color: transparent; /* Rellena el color del texto con transparencia para mostrar el fondo */
-  transition: background-color 1s ease; /* Transición suave para cambios de color de fondo */
-  font-weight: bold; /* Estilo de fuente en negrita */
+  font-weight: bold; /* Establece el texto en negrita */
+  text-align: center; /* Centra el texto dentro de su contenedor */
+  margin: 0; /* Elimina el margen por defecto alrededor del título */
+  line-height: 1.2; /* Define la altura de línea para mejorar la legibilidad */
+  transition: background-color 1s ease; /* Aplica una transición suave para cambios en el color de fondo */
 }
-
-/* Estilo para el fondo del encabezado */
-.headerBackground {
-  width: 100vw; /* Ancho completo de la ventana */
-  height: 300px; /* Altura del fondo del encabezado */
-  background-image: url('/media/diseño/cabeceramoderna.jpg'); /* Imagen de fondo */
-  background-size: cover; /* Cubre todo el área del elemento */
-  background-position: center; /* Centra la imagen de fondo */
-  display: flex; /* Utiliza flexbox para centrar contenido */
-  align-items: center; /* Centra verticalmente el contenido */
-  justify-content: center; /* Centra horizontalmente el contenido */
-}
-
-/* Capa oscura sobre el fondo del encabezado */
-.headerBackground::before {
-  content: ''; /* Crea un pseudo-elemento vacío */
-  position: absolute; /* Posiciona el pseudo-elemento absolutamente */
-  top: 0; /* Alínea en la parte superior */
-  left: 0; /* Alínea a la izquierda */
-  right: 0; /* Alínea a la derecha */
-  bottom: 0; /* Alínea en la parte inferior */
-  background: rgba(0, 0, 0, 0.4); /* Capa negra semitransparente */
-  z-index: 1; /* Coloca esta capa detrás del título */
-}
-
 /* Estilo para el contenedor principal */
 main {
   display: flex; /* Utiliza flexbox para el diseño */
