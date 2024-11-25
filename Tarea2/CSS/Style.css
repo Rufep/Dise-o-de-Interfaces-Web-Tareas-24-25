@@ -1,0 +1,71 @@
+/* Imagen de fondo de la página */
+.image-background img {
+  width: 100%;             /* Establece el ancho de la imagen al 100% del contenedor */
+  height: 100%;            /* Establece la altura de la imagen al 100% del contenedor */
+  object-fit: cover;       /* Hace que la imagen cubra todo el área sin distorsionarse */
+  position: absolute;      /* Coloca la imagen de fondo de forma absoluta respecto a su contenedor */
+  top: 0;                  /* Alinea la imagen al borde superior de su contenedor */
+  left: 0;                 /* Alinea la imagen al borde izquierdo de su contenedor */
+  z-index: -1;             /* Coloca la imagen por detrás del contenido de la página */
+  margin-top: 30%;         /* Añade margen en la parte superior de la imagen de fondo */
+  margin-bottom: 30%;      /* Añade margen en la parte inferior de la imagen de fondo */
+}
+
+/* Establecer el tamaño fijo de las imágenes */
+.img-size {
+  width: 400px;            /* Establece el ancho de las imágenes a 400px */
+  height: 600px;           /* Establece la altura de las imágenes a 600px */
+  border-radius: 10%;      /* Aplica un radio de borde del 10% a las esquinas de las imágenes */
+}
+
+/* Animación para mover las imágenes hacia arriba */
+@keyframes moveUp {
+  0% {
+    transform: translateY(100%); /* Comienza desde abajo */
+  }
+  100% {
+    transform: translateY(-100%); /* Se mueve hacia arriba */
+  }
+}
+
+/* Animación para mover las imágenes hacia abajo */
+@keyframes moveDown {
+  0% {
+    transform: translateY(-100%); /* Comienza desde arriba */
+  }
+  100% {
+    transform: translateY(100%); /* Se mueve hacia abajo */
+  }
+}
+
+/* Desplazamiento hacia arriba continuo de las imágenes en la primera columna */
+.col-4:first-child img {
+  animation: moveUp 40s linear infinite; /* Aplica la animación 'moveUp' con un ciclo infinito */
+  max-width: 100%;
+  height: auto;
+  border-radius: 10%;
+}
+
+/* Asegurarse de que las imágenes no se salgan del contenedor */
+.col-4 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10%;
+
+}
+
+/* Desplazamiento hacia arriba continuo de las imágenes en la tercera columna */
+.col-4:nth-child(3) img {
+  animation: moveUp 40s linear infinite; /* Aplica la animación 'moveUp' con un ciclo infinito */
+  max-width: 100%;
+  height: auto;
+  border-radius: 10%;
+}
+
+/* Desplazamiento hacia abajo continuo de las imágenes en la segunda columna */
+.col-4:nth-child(2) img {
+  animation: moveDown 40s linear infinite; /* Aplica la animación 'moveDown' con un ciclo infinito */
+  max-width: 100%;
+  height: auto;
+  border-radius: 10%;
+}
