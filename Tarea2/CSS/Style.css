@@ -1,77 +1,112 @@
-/* Imagen de fondo de la página */
-.image-background img {
-  width: 100%;             /* Establece el ancho de la imagen al 100% del contenedor */
-  height: 100%;            /* Establece la altura de la imagen al 100% del contenedor */
-  object-fit: cover;       /* Hace que la imagen cubra todo el área sin distorsionarse */
-  position: absolute;      /* Coloca la imagen de fondo de forma absoluta respecto a su contenedor */
-  top: 0;                  /* Alinea la imagen al borde superior de su contenedor */
-  left: 0;                 /* Alinea la imagen al borde izquierdo de su contenedor */
-  z-index: -1;             /* Coloca la imagen por detrás del contenido de la página */
-  margin-top: 30%;         /* Añade margen en la parte superior de la imagen de fondo */
-  margin-bottom: 30%;      /* Añade margen en la parte inferior de la imagen de fondo */
+/* Navbar siempre visible */
+.navbar {
+  position: relative; /* Establece la posición del navbar como relativa, lo que permite posicionar otros elementos respecto a él */
+  z-index: 100; /* Establece un valor alto para el z-index, asegurando que el navbar esté por encima de otros elementos, como las imágenes */
+}
+.navbar img{
+  height: 100px; /* Establece una altura fija de 100px para las imágenes dentro del navbar */
+  width: 100px; /* Establece un ancho fijo de 100px para las imágenes dentro del navbar */
+  border-radius: 50%; /* Hace que la imagen sea circular */
 }
 
-/* Establecer el tamaño fijo de las imágenes */
+/* Formato para el texto del navbar */
+.navbar-nav .nav-link {
+  font-family: monospace; /* Cambia la fuente del texto */
+  font-size: 18px; /* Tamaño de la fuente */
+  font-weight: bold; /* Hace el texto en negrita */
+  color: #ffffff; /* Color del texto (blanco) */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  padding: 10px 15px; /* Espaciado alrededor del texto */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f39c12; /* Color al pasar el ratón (un tono dorado) */
+  text-decoration: underline; /* Subraya el texto al pasar el ratón */
+}
+
+/* Imagen de fondo de la página */
+.image-background img {
+  width: 100%; /* Establece el ancho de la imagen al 100% del contenedor, de modo que se ajuste al ancho disponible */
+  height: 100%; /* Establece la altura de la imagen al 100% del contenedor, ajustando la altura disponible */
+  object-fit: cover; /* Hace que la imagen cubra todo el área del contenedor sin distorsionarse, recortando partes si es necesario */
+  position: absolute; /* Coloca la imagen en una posición absoluta dentro de su contenedor, por encima de otros elementos */
+  margin-top: 30%; /* Añade un margen superior del 30%, desplazando la imagen desde la parte superior del contenedor */
+  margin-bottom: 30%; /* Añade un margen inferior del 30%, desplazando la imagen desde la parte inferior del contenedor */
+  z-index: -1; /* Coloca la imagen detrás del contenido principal de la página, para que no tape los elementos visibles */
+}
+
+/* Asegurar que las imágenes se recorten dentro del contenedor */
+.overflow-hidden {
+  position: relative; /* Establece la posición del contenedor como relativa para que los elementos hijos se posicionen respecto a él */
+  overflow: hidden; /* Oculta cualquier contenido que sobresalga del contenedor, como las imágenes que se desborden */
+  height: 600px; /* Establece una altura fija de 600px para el contenedor, asegurando que las imágenes no se desborden más allá de esa altura */
+}
+
+/* Estilo de las imágenes */
 .img-size {
-  width: 400px;            /* Establece el ancho de las imágenes a 400px */
-  height: 600px;           /* Establece la altura de las imágenes a 600px */
-  border-radius: 10%;      /* Aplica un radio de borde del 10% a las esquinas de las imágenes */
+  width: 400px; /* Establece el ancho de las imágenes a 400px */
+  height: 600px; /* Establece la altura de las imágenes a 600px */
+  border-radius: 10%; /* Añade bordes redondeados a las imágenes, dándoles un efecto de esquina suavizada */
+}
+
+/* Desplazamiento continuo de las imágenes */
+.col-4:first-child img {
+  animation: moveUp 40s linear infinite; /* Aplica la animación 'moveUp' al primer hijo de la columna, moviéndolo hacia arriba en 40 segundos de manera continua */
+}
+
+.col-4:nth-child(2) img {
+  animation: moveDown 40s linear infinite; /* Aplica la animación 'moveDown' al segundo hijo de la columna, moviéndolo hacia abajo en 40 segundos de manera continua */
+}
+
+.col-4:nth-child(3) img {
+  animation: moveUp 40s linear infinite; /* Aplica la animación 'moveUp' al tercer hijo de la columna, moviéndolo hacia arriba en 40 segundos de manera continua */
 }
 
 /* Animación para mover las imágenes hacia arriba */
 @keyframes moveUp {
   0% {
-    transform: translateY(100%); /* Comienza desde abajo */
+    transform: translateY(100%); /* Comienza la animación moviendo la imagen hacia abajo fuera de la vista */
   }
   100% {
-    transform: translateY(-100%); /* Se mueve hacia arriba */
+    transform: translateY(-100%); /* Termina la animación moviendo la imagen hacia arriba fuera de la vista */
   }
 }
 
 /* Animación para mover las imágenes hacia abajo */
 @keyframes moveDown {
   0% {
-    transform: translateY(-100%); /* Comienza desde arriba */
+    transform: translateY(-100%); /* Comienza la animación moviendo la imagen hacia arriba fuera de la vista */
   }
   100% {
-    transform: translateY(100%); /* Se mueve hacia abajo */
+    transform: translateY(100%); /* Termina la animación moviendo la imagen hacia abajo fuera de la vista */
   }
 }
-
-/* Desplazamiento hacia arriba continuo de las imágenes en la primera columna */
-.col-4:first-child img {
-  animation: moveUp 40s linear infinite; /* Aplica la animación 'moveUp' con un ciclo infinito */
-  max-width: 100%;
-  height: auto;
-  border-radius: 10%;
+/* Cambiar el cursor a mano cuando el ratón pase sobre la imagen */
+a img {
+  cursor: pointer; /* Cambia el cursor a una mano */
+}
+/* Estilo del círculo que aparecerá al hacer hover */
+.cursor-ring {
+  position: absolute;
+  width: 100px; /* Tamaño del círculo */
+  height: 100px; /* Tamaño del círculo */
+  border-radius: 50%; /* Hace el borde circular */
+  border: 2px solid #f39c12; /* Borde(un tono dorado */
+  background-color:#f39c12;; /* Relleno del círculo con color (un tono dorado */
+  pointer-events: none; /* Evita que interfiera con la interacción del ratón */
+  transform: translate(-50%, -50%); /* Centra el círculo en el cursor */
+  z-index: 1000; /* Asegura que el círculo esté por encima de otros elementos */
+  display: none; /* El círculo está oculto por defecto */
+  color: white; /* Color del texto */
+  font-size: 18px; /* Tamaño del texto */
+  font-family:monospace; /* Tipo de fuente del texto */
+  font-weight: bold; /* Negrita en el texto */
+  text-align: center; /* Centra el texto horizontalmente */
+  line-height: 90px; /* Centra el texto verticalmente dentro del círculo */
 }
 
-/* Asegurarse de que las imágenes no se salgan del contenedor */
-.col-4 img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10%;
-
+/* Hacer que el círculo se muestre solo cuando se hace hover sobre la imagen */
+a:hover .cursor-ring {
+  display: block; /* Muestra el círculo al hacer hover */
 }
 
-/* Desplazamiento hacia arriba continuo de las imágenes en la tercera columna */
-.col-4:nth-child(3) img {
-  animation: moveUp 40s linear infinite; /* Aplica la animación 'moveUp' con un ciclo infinito */
-  max-width: 100%;
-  height: auto;
-  border-radius: 10%;
-}
-
-/* Desplazamiento hacia abajo continuo de las imágenes en la segunda columna */
-.col-4:nth-child(2) img {
-  animation: moveDown 40s linear infinite; /* Aplica la animación 'moveDown' con un ciclo infinito */
-  max-width: 100%;
-  height: auto;
-  border-radius: 10%;
-}
-
-.navbar-brand img {
-  height: 100px;
-  width: 100px;
-  object-fit: cover; /* Opcional, para ajustar el contenido */
-}

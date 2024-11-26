@@ -1,0 +1,112 @@
+/* Navbar siempre visible */
+.navbar {
+  position: relative; /* Establece la posición del navbar como relativa, lo que permite posicionar otros elementos respecto a él */
+  z-index: 100; /* Establece un valor alto para el z-index, asegurando que el navbar esté por encima de otros elementos, como las imágenes */
+}
+
+.navbar img {
+  height: 100px; /* Establece una altura fija de 100px para las imágenes dentro del navbar */
+  width: 100px; /* Establece un ancho fijo de 100px para las imágenes dentro del navbar */
+  border-radius: 50%; /* Hace que la imagen sea circular */
+}
+
+/* Formato para el texto del navbar */
+.navbar-nav .nav-link {
+  font-family: monospace; /* Cambia la fuente del texto */
+  font-size: 18px; /* Tamaño de la fuente */
+  font-weight: bold; /* Hace el texto en negrita */
+  color: #ffffff; /* Color del texto (blanco) */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  padding: 10px 15px; /* Espaciado alrededor del texto */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f39c12; /* Color al pasar el ratón (un tono dorado) */
+  text-decoration: underline; /* Subraya el texto al pasar el ratón */
+}
+
+/* Imagen de fondo de la página */
+.image-background img {
+  width: 100%; /* Establece el ancho de la imagen al 100% del contenedor, de modo que se ajuste al ancho disponible */
+  height: 100%; /* Establece la altura de la imagen al 100% del contenedor, ajustando la altura disponible */
+  object-fit: cover; /* Hace que la imagen cubra todo el área del contenedor sin distorsionarse, recortando partes si es necesario */
+  position: absolute; /* Coloca la imagen en una posición absoluta dentro de su contenedor, por encima de otros elementos */
+  z-index: -1; /* Coloca la imagen detrás del contenido principal de la página, para que no tape los elementos visibles */
+}
+
+/* Estilo de las imágenes */
+.img-size {
+  width: 400px; /* Establece el ancho de las imágenes a 400px */
+  height: 600px; /* Establece la altura de las imágenes a 600px */
+  border-radius: 10%; /* Añade bordes redondeados a las imágenes, dándoles un efecto de esquina suavizada */
+}
+
+/* Estilo para el contenedor de la lista (ul) */
+.TextDesing ul {
+  list-style-type: none;
+  margin-left: 20px; /* Desplaza la lista hacia la derecha */
+  padding-left: 0; /* Quitamos el padding extra */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo con transparencia */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra alrededor del contenedor de la lista */
+  padding: 10px; /* Espaciado interno */
+  display: inline-block; /* Ajusta el tamaño al contenido */
+  max-width: 90%; /* Limita el ancho máximo relativo al contenedor */
+  box-sizing: border-box; /* Incluye el padding dentro del ancho */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Cambia la fuente */
+  font-size: 16px; /* Ajusta el tamaño del texto */
+  line-height: 1.8; /* Espaciado entre líneas */
+  color: #e0e0e0; /* Color del texto */
+}
+
+/* Estilo para los elementos de la lista (li) */
+.TextDesing li {
+  padding: 8px; /* Espaciado entre los elementos */
+  border-bottom: 1px solid #ccc; /* Línea separadora entre los elementos */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Cambia la fuente */
+  font-size: 16px; /* Ajusta el tamaño del texto */
+  color: #e0e0e0; /* Color del texto */
+  background-color: transparent; /* Fondo transparente */
+}
+
+/* Añade un efecto de sombreado en los elementos cuando el usuario pasa el ratón */
+.TextDesing li:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro al pasar el ratón */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra adicional en hover */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+/* Estilo para el texto de la descripción */
+.TextDesing p {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Tipo de fuente para la descripción */
+  font-size: 18px; /* Tamaño de la fuente */
+  line-height: 1.6; /* Espaciado entre líneas */
+  color: #e0e0e0; /* Color del texto (similar al de la lista) */
+  margin-top: 15px; /* Añade espacio superior antes de la descripción */
+  text-align: justify; /* Justifica el texto */
+  padding: 10px 20px; /* Espaciado alrededor del texto (20px para los lados) */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+  border-radius: 8px; /* Bordes redondeados para la caja de la descripción */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra alrededor de la caja */
+  max-width: 90%; /* Limita el ancho del contenedor al 90% del ancho disponible */
+  margin-left: auto; /* Centra el contenedor horizontalmente */
+  margin-right: auto; /* Centra el contenedor horizontalmente */
+  display: inline-block; /* Ajusta el tamaño al contenido */
+}
+/* Estilo para los encabezados h2 */
+.TextDesing h2 {
+  font-family: 'Georgia', serif; /* Tipo de fuente para el h2 */
+  font-size: 24px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+
+  margin-top: 20px; /* Espacio superior antes del h2 */
+  margin-bottom: 10px; /* Espacio inferior después del h2 */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  padding: 10px 0; /* Espaciado arriba y abajo del texto */
+  max-width: 90%; /* Limita el ancho del contenedor */
+  margin-left: auto; /* Centra el h2 horizontalmente */
+  margin-right: auto; /* Centra el h2 horizontalmente */
+  position: relative; /* Necesario para el subrayado */
+  text-decoration: underline; /* Subrayado permanente */
+}
+
