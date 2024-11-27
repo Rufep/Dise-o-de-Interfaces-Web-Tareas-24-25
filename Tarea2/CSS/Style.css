@@ -1,13 +1,14 @@
+
 /* Fondo del body */
 body {
   margin: 0; /* Elimina márgenes por defecto */
   padding: 0; /* Elimina relleno por defecto */
   background: linear-gradient(45deg, #000000, #808080); /* Degradado de negro a gris claro */
   color: #ffffff; /* Color del texto blanco */
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Fuente monospace */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Fuente */
   height: 100vh; /* Ocupa toda la altura de la ventana */
   display: block; /* Asegura que no se alteren las posiciones */
-  animation: gradientShift 15s ease infinite; /* Aplica la animación de fondo */
+
 }
 
 /* Navbar siempre visible */

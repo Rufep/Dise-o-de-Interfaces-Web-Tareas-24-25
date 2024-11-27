@@ -4,10 +4,9 @@ body {
   padding: 0; /* Elimina relleno por defecto */
   background: linear-gradient(45deg, #000000, #808080); /* Degradado de negro a gris claro */
   color: #ffffff; /* Color del texto blanco */
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Fuente monospace */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Fuente */
   height: 100vh; /* Ocupa toda la altura de la ventana */
   display: block; /* Asegura que no se alteren las posiciones */
-  animation: gradientShift 15s ease infinite; /* Aplica la animación de fondo */
 }
 
 /* Navbar siempre visible */
@@ -114,7 +113,7 @@ body {
   margin-right: auto; /* Centra el h2 horizontalmente */
   position: relative; /* Necesario para el subrayado */
   text-decoration: underline; /* Subrayado permanente */
-  color: #ffffffb0;
+  color: #ffffffb0;/*Cambia el Color del Texto*/
 }
 
 /* Efecto de zoom solo para la imagen de la guitarra */
