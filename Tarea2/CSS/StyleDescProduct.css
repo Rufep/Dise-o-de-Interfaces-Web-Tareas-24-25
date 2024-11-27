@@ -6,13 +6,12 @@ body {
   color: #ffffff; /* Color del texto blanco */
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Fuente */
   height: 100vh; /* Ocupa toda la altura de la ventana */
-  display: block; /* Asegura que no se alteren las posiciones */
 }
 
 /* Navbar siempre visible */
 .navbar {
-  position: relative; /* Establece la posición del navbar como relativa, lo que permite posicionar otros elementos respecto a él */
-  z-index: 100; /* Establece un valor alto para el z-index, asegurando que el navbar esté por encima de otros elementos, como las imágenes */
+  position: relative; /* Establece la posición del navbar como relativa */
+  z-index: 100; /* Establece un valor alto para el z-index */
 }
 
 .navbar img {
@@ -23,7 +22,6 @@ body {
 
 /* Formato para el texto del navbar */
 .navbar-nav .nav-link {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Cambia la fuente del texto */
   font-size: 18px; /* Tamaño de la fuente */
   font-weight: bold; /* Hace el texto en negrita */
   color: #ffffff; /* Color del texto (blanco) */
@@ -32,17 +30,16 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-  color: #f39c12; /* Color al pasar el ratón (un tono dorado) */
+  color: #f39c12; /* Color al pasar el ratón */
   text-decoration: underline; /* Subraya el texto al pasar el ratón */
 }
-
 
 /* Estilo de las imágenes */
 .img-size {
   margin-top: 20%;
   width: 400px; /* Establece el ancho de las imágenes a 400px */
   height: 600px; /* Establece la altura de las imágenes a 600px */
-  border-radius: 10%; /* Añade bordes redondeados a las imágenes, dándoles un efecto de esquina suavizada */
+  border-radius: 10%; /* Añade bordes redondeados a las imágenes */
   border: solid 3px black; /* Añade un borde negro alrededor de las imágenes */
 }
 
@@ -53,12 +50,10 @@ body {
   padding-left: 0; /* Quita el padding extra */
   background-color: rgba(0, 0, 0, 0.7); /* Fondo con transparencia */
   border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra alrededor del contenedor de la lista */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra alrededor del contenedor */
   padding: 10px; /* Espaciado interno */
-  display: inline-block; /* Ajusta el tamaño al contenido */
   max-width: 90%; /* Limita el ancho máximo relativo al contenedor */
   box-sizing: border-box; /* Incluye el padding dentro del ancho */
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Cambia la fuente */
   font-size: 16px; /* Ajusta el tamaño del texto */
   line-height: 1.8; /* Espaciado entre líneas */
   color: #e0e0e0; /* Color del texto */
@@ -68,7 +63,6 @@ body {
 .TextDesing li {
   padding: 8px; /* Espaciado entre los elementos */
   border-bottom: 1px solid #ccc; /* Línea separadora entre los elementos */
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Cambia la fuente */
   font-size: 16px; /* Ajusta el tamaño del texto */
   color: #e0e0e0; /* Color del texto */
   background-color: transparent; /* Fondo transparente */
@@ -83,26 +77,23 @@ body {
 
 /* Estilo para el texto de la descripción */
 .TextDesing p {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Tipo de fuente para la descripción */
   font-size: 18px; /* Tamaño de la fuente */
   line-height: 1.6; /* Espaciado entre líneas */
-  color: #e0e0e0; /* Color del texto (similar al de la lista) */
+  color: #e0e0e0; /* Color del texto */
   margin-top: 15px; /* Añade espacio superior antes de la descripción */
   text-align: justify; /* Justifica el texto */
   padding: 10px 20px; /* Espaciado alrededor del texto (20px para los lados) */
   background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
-  border-radius: 8px; /* Bordes redondeados para la caja de la descripción */
+  border-radius: 8px; /* Bordes redondeados */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra alrededor de la caja */
-  max-width: 90%; /* Limita el ancho del contenedor al 90% del ancho disponible */
+  max-width: 90%; /* Limita el ancho del contenedor */
   margin-left: auto; /* Centra el contenedor horizontalmente */
   margin-right: auto; /* Centra el contenedor horizontalmente */
-  display: inline-block; /* Ajusta el tamaño al contenido */
 }
 
 /* Estilo para los encabezados h2 */
 .TextDesing h2 {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Tipo de fuente para el h2 */
-  font-size: 32PX; /* Tamaño de la fuente */
+  font-size: 32px; /* Tamaño de la fuente */
   font-weight: bold; /* Negrita */
   margin-top: 20px; /* Espacio superior antes del h2 */
   margin-bottom: 10px; /* Espacio inferior después del h2 */
@@ -111,9 +102,7 @@ body {
   max-width: 90%; /* Limita el ancho del contenedor */
   margin-left: auto; /* Centra el h2 horizontalmente */
   margin-right: auto; /* Centra el h2 horizontalmente */
-  position: relative; /* Necesario para el subrayado */
-  text-decoration: underline; /* Subrayado permanente */
-  color: #ffffffb0;/*Cambia el Color del Texto*/
+  color: #ffffffb0; /* Cambia el color del texto */
 }
 
 /* Efecto de zoom solo para la imagen de la guitarra */
@@ -124,4 +113,4 @@ body {
 .guitar-image:hover {
   transform: scale(1.2); /* Zoom al pasar el ratón */
   cursor: pointer; /* Cambia el cursor a pointer al pasar el ratón */
-}
+} 

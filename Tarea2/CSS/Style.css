@@ -1,30 +1,27 @@
-
 /* Fondo del body */
 body {
   margin: 0; /* Elimina márgenes por defecto */
   padding: 0; /* Elimina relleno por defecto */
   background: linear-gradient(45deg, #000000, #808080); /* Degradado de negro a gris claro */
   color: #ffffff; /* Color del texto blanco */
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Fuente */
+  font-family: 'Trebuchet MS', Arial, sans-serif; /* Fuente */
   height: 100vh; /* Ocupa toda la altura de la ventana */
-  display: block; /* Asegura que no se alteren las posiciones */
-
 }
 
 /* Navbar siempre visible */
 .navbar {
-  position: relative; /* Establece la posición del navbar como relativa, lo que permite posicionar otros elementos respecto a él */
-  z-index: 100; /* Establece un valor alto para el z-index, asegurando que el navbar esté por encima de otros elementos, como las imágenes */
+  position: relative; /* Establece la posición del navbar como relativa */
+  z-index: 100; /* Asegura que el navbar esté por encima de otros elementos */
 }
-.navbar img{
-  height: 100px; /* Establece una altura fija de 100px para las imágenes dentro del navbar */
-  width: 100px; /* Establece un ancho fijo de 100px para las imágenes dentro del navbar */
+
+.navbar img {
+  height: 100px; /* Establece una altura fija para las imágenes dentro del navbar */
+  width: 100px; /* Establece un ancho fijo para las imágenes dentro del navbar */
   border-radius: 50%; /* Hace que la imagen sea circular */
 }
 
 /* Formato para el texto del navbar */
 .navbar-nav .nav-link {
-  font-family: monospace; /* Cambia la fuente del texto */
   font-size: 18px; /* Tamaño de la fuente */
   font-weight: bold; /* Hace el texto en negrita */
   color: #ffffff; /* Color del texto (blanco) */
@@ -37,80 +34,68 @@ body {
   text-decoration: underline; /* Subraya el texto al pasar el ratón */
 }
 
-
-
 /* Asegurar que las imágenes se recorten dentro del contenedor */
 .overflow-hidden {
-  position: relative; /* Establece la posición del contenedor como relativa para que los elementos hijos se posicionen respecto a él */
-  overflow: hidden; /* Oculta cualquier contenido que sobresalga del contenedor, como las imágenes que se desborden */
-  height: 600px; /* Establece una altura fija de 600px para el contenedor, asegurando que las imágenes no se desborden más allá de esa altura */
+  position: relative; /* Establece la posición del contenedor */
+  overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+  height: 600px; /* Establece una altura fija para el contenedor */
 }
 
 /* Estilo de las imágenes */
 .img-size {
-  width: 400px; /* Establece el ancho de las imágenes a 400px */
-  height: 600px; /* Establece la altura de las imágenes a 600px */
-  border-radius: 10%; /* Añade bordes redondeados a las imágenes, dándoles un efecto de esquina suavizada */
+  width: 400px; /* Establece el ancho de las imágenes */
+  height: 600px; /* Establece la altura de las imágenes */
+  border-radius: 10%; /* Bordes redondeados */
 }
 
 /* Desplazamiento continuo de las imágenes */
-.col-4:first-child img {
-  animation: moveUp 40s linear infinite; /* Aplica la animación 'moveUp' al primer hijo de la columna, moviéndolo hacia arriba en 40 segundos de manera continua */
+.col-4:first-child img,
+.col-4:nth-child(3) img {
+  animation: moveUp 40s linear infinite; /* Animación 'moveUp' para el primer y tercer hijo */
 }
 
 .col-4:nth-child(2) img {
-  animation: moveDown 40s linear infinite; /* Aplica la animación 'moveDown' al segundo hijo de la columna, moviéndolo hacia abajo en 40 segundos de manera continua */
-}
-
-.col-4:nth-child(3) img {
-  animation: moveUp 40s linear infinite; /* Aplica la animación 'moveUp' al tercer hijo de la columna, moviéndolo hacia arriba en 40 segundos de manera continua */
+  animation: moveDown 40s linear infinite; /* Animación 'moveDown' para el segundo hijo */
 }
 
 /* Animación para mover las imágenes hacia arriba */
 @keyframes moveUp {
-  0% {
-    transform: translateY(100%); /* Comienza la animación moviendo la imagen hacia abajo fuera de la vista */
-  }
-  100% {
-    transform: translateY(-100%); /* Termina la animación moviendo la imagen hacia arriba fuera de la vista */
-  }
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
 }
 
 /* Animación para mover las imágenes hacia abajo */
 @keyframes moveDown {
-  0% {
-    transform: translateY(-100%); /* Comienza la animación moviendo la imagen hacia arriba fuera de la vista */
-  }
-  100% {
-    transform: translateY(100%); /* Termina la animación moviendo la imagen hacia abajo fuera de la vista */
-  }
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
 }
+
 /* Cambiar el cursor a mano cuando el ratón pase sobre la imagen */
 a img {
   cursor: pointer; /* Cambia el cursor a una mano */
 }
+
 /* Estilo del círculo que aparecerá al hacer hover */
 .cursor-ring {
   position: absolute;
   width: 100px; /* Tamaño del círculo */
   height: 100px; /* Tamaño del círculo */
   border-radius: 50%; /* Hace el borde circular */
-  border: 2px solid #f39c12; /* Borde(un tono dorado */
-  background-color:#f39c12;; /* Relleno del círculo con color (un tono dorado */
+  border: 2px solid #f39c12; /* Borde dorado */
+  background-color: #f39c12; /* Relleno del círculo */
   pointer-events: none; /* Evita que interfiera con la interacción del ratón */
   transform: translate(-50%, -50%); /* Centra el círculo en el cursor */
   z-index: 1000; /* Asegura que el círculo esté por encima de otros elementos */
   display: none; /* El círculo está oculto por defecto */
   color: white; /* Color del texto */
   font-size: 18px; /* Tamaño del texto */
-  font-family:monospace; /* Tipo de fuente del texto */
+  font-family: monospace; /* Tipo de fuente del texto */
   font-weight: bold; /* Negrita en el texto */
   text-align: center; /* Centra el texto horizontalmente */
   line-height: 90px; /* Centra el texto verticalmente dentro del círculo */
 }
 
-/* Hacer que el círculo se muestre solo cuando se hace hover sobre la imagen */
+/* Mostrar el círculo solo al hacer hover sobre la imagen */
 a:hover .cursor-ring {
   display: block; /* Muestra el círculo al hacer hover */
 }
-
