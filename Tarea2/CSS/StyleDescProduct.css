@@ -8,11 +8,6 @@ body {
   height: 100vh; /* Ocupa toda la altura de la ventana */
 }
 
-/* Navbar siempre visible */
-.navbar {
-  position: relative; /* Establece la posición del navbar como relativa */
-  z-index: 100; /* Establece un valor alto para el z-index */
-}
 
 .navbar img {
   height: 100px; /* Establece una altura fija de 100px para las imágenes dentro del navbar */

@@ -8,12 +8,6 @@ body {
   height: 100vh; /* Ocupa toda la altura de la ventana */
 }
 
-/* Navbar siempre visible */
-.navbar {
-  position: relative; /* Establece la posición del navbar como relativa */
-  z-index: 100; /* Asegura que el navbar esté por encima de otros elementos */
-}
-
 .navbar img {
   height: 100px; /* Establece una altura fija para las imágenes dentro del navbar */
   width: 100px; /* Establece un ancho fijo para las imágenes dentro del navbar */
@@ -99,3 +93,4 @@ a img {
 a:hover .cursor-ring {
   display: block; /* Muestra el círculo al hacer hover */
 }
+
